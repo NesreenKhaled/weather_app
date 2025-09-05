@@ -1,4 +1,4 @@
-import 'dart:math';
+
 
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'get_weather_states.dart';
@@ -13,7 +13,7 @@ class GetWeatherCubit extends Cubit<Weatherstate> {
       WeatherModel weatherModel = await WeatherService(
         Dio(),
       ).getCurrentWeather(cityName: cityName);
-      emit(Weatherloadedstate());
+      emit(Weatherloadedstate(weatherModel));
     } catch (e) {
       emit(Weatherfailurstate());
     }
