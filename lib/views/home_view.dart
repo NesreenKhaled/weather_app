@@ -32,7 +32,7 @@ class HomeView extends StatelessWidget {
       body: BlocBuilder<GetWeatherCubit, Weatherstate>(
         builder: (context, state) {
           if (state is Weatherloadedstate) {
-            return WeatherInfoBody(  weathermodel:  state.weatherModel);
+            return WeatherInfoBody( );
           } else if (state is Weatherfailurstate) {
             return Center(
               child: Text('Failed to load weather data. Please try again.'),

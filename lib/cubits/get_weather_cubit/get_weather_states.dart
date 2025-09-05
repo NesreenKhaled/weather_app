@@ -9,4 +9,9 @@ final  WeatherModel ?weatherModel;
 
 class Intialstate extends Weatherstate {}
 
-class Weatherfailurstate extends Weatherstate {}
+class Weatherfailurstate extends Weatherstate {
+  final String errormessage;
+
+  Weatherfailurstate(String string, {required this.errormessage});
+
+}
