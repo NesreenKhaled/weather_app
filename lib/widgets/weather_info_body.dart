@@ -9,17 +9,17 @@ class WeatherInfoBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var weathermodel =BlocProvider.of<GetWeatherCubit>(context).weatherModel;
+WeatherModel weathermodel =BlocProvider.of<GetWeatherCubit>(context).weatherModel!;
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
          Text(
-            BlocProvider.of<GetWeatherCubit>(context).weatherModel.cityName,
+            BlocProvider.of<GetWeatherCubit>(context).weatherModel!.cityName,
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 32),
           ),
-          const Text('updated at 23:46', style: TextStyle(fontSize: 24)),
+         Text('updated at ${weathermodel.date.hour}:${weathermodel.date.minute} ', style: TextStyle(fontSize: 24)),
           const SizedBox(height: 32),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

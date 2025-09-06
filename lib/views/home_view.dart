@@ -5,7 +5,7 @@ import 'package:weather_app/views/search_view.dart';
 import 'package:weather_app/widgets/weather_info_body.dart';
 import 'package:weather_app/cubits/get_weather_cubit/get_weather_cubit.dart';
 import 'package:weather_app/cubits/get_weather_cubit/get_weather_states.dart';
-import 'package:weather_app/models/weather_model.dart';
+
 class HomeView extends StatelessWidget {
   const HomeView({Key? key}) : super(key: key);
 
