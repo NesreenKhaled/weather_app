@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 
 class NoWeatherBody extends StatelessWidget {
-  const NoWeatherBody({
-    Key? key,
-  }) : super(key: key);
+  const NoWeatherBody({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,17 +12,13 @@ class NoWeatherBody extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(
-              'there is no weather 😔 start',
-              style: TextStyle(
-                fontSize: 30,
-              ),
+              'There is no weather 😔 start',
+              style: TextStyle(fontSize: 30, fontFamily: 'Pacifico'),
             ),
             Text(
               'searching now 🔍',
-              style: TextStyle(
-                fontSize: 30,
-              ),
-            )
+              style: TextStyle(fontSize: 30, fontFamily: 'Pacifico'),
+            ),
           ],
         ),
       ),
